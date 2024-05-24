@@ -169,7 +169,7 @@ static int adl_bmc_probe ( struct i2c_client *client, const struct i2c_device_id
 
 }
 
-static int adl_bmc_remove ( struct i2c_client *client) 
+static void adl_bmc_remove ( struct i2c_client *client) 
 {
 
 	struct device *dev = &client->dev;
@@ -178,7 +178,7 @@ static int adl_bmc_remove ( struct i2c_client *client)
 
 	mfd_remove_devices (dev);
 
-	return 0;
+	return;
 }
 
 
